@@ -79,5 +79,29 @@ void printWayLength(int N)
 }
 */
 
+int main()
+{
+	#ifndef ONLINE_JUDGE
+	freopen("in.txt","r",stdin);
+	#endif
+
+	int N,M,S,T;
+
+	cin>>N>>M>>S>>T;
+
+	initWayLength(N);
+
+	while(M--)
+	{
+		int from, to, length;
+		cin>>from>>to>>length;
+		way[from][to]=min(length,way[from][to]);
+		way[to][from]=min(length,way[to][from]);
+	}
+
+
+	findMinWay_SPFA(S,T,N);
+}
+
 
  
