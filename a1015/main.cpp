@@ -1,3 +1,4 @@
+/* We use KMP to find the repeat of key word */
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -7,21 +8,20 @@ int find_repeat_KMP(pair<string,string>);
 
 int main()
 {
+	#ifndef ONLINE_JUDGE
+	freopen("in.txt","r",stdin);
+	#endif
 	int num_eg;
 	cin>>num_eg;
 
 	pair<string,string>* pai = new pair<string,string>[num_eg];
 	
-
 	read_keyword(num_eg,pai);
 
-
-
-	
-	for(int i=0;i<num_eg;i++)									//这里之后可以使用重载‘<<’运算符；也许还可以写成lambda函数
+	for(int i=0;i<num_eg;i++)									
 	{
 		pair<string,string> p=pai[i];
-		int re_num = find_repeat_KMP(p);				//也可以使用迭代器输出
+		int re_num = find_repeat_KMP(p);				
 		cout<<re_num<<endl;
 	}
 
@@ -45,6 +45,8 @@ void read_keyword(int num, pair<string,string>* pai)
 	}
 }
 
+/*构造next数组，构造思路和使用next寻找字符串思路类似，利用已经求好的next值，求解新的next值*/
+/*next[i]代表第i位应该用第几位来代替，当==-1时，特别处理，与匹配同样处理*/
 void make_next(string key, int* next)
 {
 	next[0]=-1;
@@ -65,40 +67,33 @@ void make_next(string key, int* next)
 }
 
 
-
+/*利用next数组，寻找匹配字符串*/
 int find_repeat_KMP(pair<string,string> p)
 {
 	int repeat_num=0;
 	string key =p.first;
 	string word = p.second;
-	int ks = key.size();
-	int ws = word.size();
+	int ks = key.length();
+	int ws = word.length();
 	int* next= new int[ks+1];
 	make_next(key,next);
-	int i=-1, j=-1;
-	while(i<ws-1)
-	{
 
-		while (key[j+1]==word[i+1]&& j<ks-1)
+	for(int i=0, j=0;i<ws;i++)
+	{
+		while(key[j]!=word[i]&&j>-1)
+			j=next[j];
+		if (key[j]==word[i]||j==-1)
 		{
-			i++;
 			j++;
 		}
-		if(j==ks-1)
+		if(j==ks)
 		{
 			repeat_num++;
-			i=i-next[j]+1;
-			j=-1;
-			continue;
+			i=i-next[j-1];
 		}
-		j=next[j+1]-1;
 
-		if(j==-2)
-		{
-			i++;
-			j++;
-		}
 	}
+	
 	delete[] next;
 	return repeat_num;
 }

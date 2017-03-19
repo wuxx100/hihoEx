@@ -1,3 +1,4 @@
+/* we use trie tree and the */
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -13,7 +14,7 @@ public:
 	int num_of_sub;
 	node* subnode[w_size];
 	node* parent;
-	node* trie; //根节点
+	node* trie; //等价的快速转换点
 	int value;
 	void find_trie(node* root);
 	void find_subnode(node* root);
@@ -35,6 +36,10 @@ private:
 
 int main()
 {
+	#ifndef ONLINE_JUDGE
+	freopen("in.txt","r",stdin);
+	#endif
+	
 	int num_dic;
 
 	trie_tree* t=new trie_tree;
@@ -65,6 +70,26 @@ int main()
 
 }
 
+void trie_tree::add_dic(string s)
+{
+	node* cur=root;
+	int depth=s.size();
+	for(int i=0;i<depth;i++)
+	{
+		int ch=s[i]-'a';
+		if(cur->subnode[ch]==NULL)//不存在s[i]
+		{
+			cur->subnode[ch]=new node;
+			cur->subnode[ch]->value=ch;
+			cur->subnode[ch]->parent=cur;
+
+			//num_of_sub++;
+		}
+		cur=cur->subnode[ch];
+		cur->num_of_sub++;
+	}
+	cur->end_of_branch=true;
+}
 
 bool trie_tree::find_dic(string s)
 {
@@ -78,7 +103,7 @@ bool trie_tree::find_dic(string s)
 			cout<<"There's an error for the pic"<<endl;
 			return false;
 		}
-		if(cur->subnode[ch]->end_of_branch==true)//不存在s[i]
+		if(cur->subnode[ch]->end_of_branch==true)
 		{
 			return true;
 		}
@@ -87,8 +112,9 @@ bool trie_tree::find_dic(string s)
 	return false;
 }
 
+//广度优先，依深度，依次把每个点指向next点
 void trie_tree::make_pic()
-{//由于要广度优先，这里使用queue，先入先出
+{//由于要广度优先，这里使用queue，先入先出!!!!!!!!!!!根进入，根出，左右进
 	root->trie=root;
 	root->parent=root;
 
@@ -117,33 +143,15 @@ void trie_tree::make_pic()
         	}
         }
 
-        curnode->find_trie(root);
-        curnode->find_subnode(root);
+        curnode->find_trie(root);		//给每个节点找到快速转换点
+        curnode->find_subnode(root);	//利用快速转换点把trie树转换成trie图，把每个点的等价子节点找到
     }
 
 }
 
-void trie_tree::add_dic(string s)
-{
-	node* cur=root;
-	int depth=s.size();
-	for(int i=0;i<depth;i++)
-	{
-		int ch=s[i]-'a';
-		if(cur->subnode[ch]==NULL)//不存在s[i]
-		{
-			cur->subnode[ch]=new node;
-			cur->subnode[ch]->value=ch;
-			cur->subnode[ch]->parent=cur;
 
-			//num_of_sub++;
-		}
-		cur=cur->subnode[ch];
-		cur->num_of_sub++;
-	}
-	cur->end_of_branch=true;
-}
-
+// 等价的快速转换点是父亲的快速转换点再走一个父亲到自己的边。
+// 一旦父节点为根节点，其快速转换点为根节点。
 void node::find_trie(node* root)
 {
 	if(parent==root)
@@ -158,6 +166,7 @@ void node::find_trie(node* root)
 	}
 }
 
+//利用快速转换点把trie树转换成trie图，把每个点的等价子节点找到
 void node::find_subnode(node* root)
 {
 
@@ -185,7 +194,4 @@ void node::find_subnode(node* root)
 	}
 }
 
-
-
-//可以添加打印树的函数；
 

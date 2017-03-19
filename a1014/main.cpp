@@ -1,3 +1,4 @@
+/*Trie树的使用*/
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -7,13 +8,13 @@ using namespace std;
 class node
 {
 public:
-	node():num_of_sub(0){for (int i=0; i<w_size; i++) subnode[i]=NULL;}//复习初始化的多种形式
+	node():num_of_sub(0){memset(subnode,0,w_size);}//for (int i=0; i<w_size; i++) subnode[i]=NULL;}//复习初始化的多种形式
 	//应该有析构函数
 	//void add_subnode(node n);
 	//void end_the_branch(){node_var=1;}
-//先设成public，后期复习笔记上的红黑树实现，看是否使用private
+	//先设成public，后期复习笔记上的红黑树实现，看是否使用private，此时相当于struct
 	int num_of_sub;//复习默认值
-	node* subnode[w_size];//如果这里不用数组而是使用向量列出仅有的可能，就需要好好写析构函数，这样delete[]的时候就会调用每个析构函数
+	node* subnode[w_size];//如果这里不用数组而是使用vector列出仅有的可能，就需要好好写析构函数，这样delete[]的时候就会调用每个析构函数
 };
 
 class trie_tree
@@ -31,6 +32,10 @@ private:
 
 int main()
 {
+	#ifndef ONLINE_JUDGE
+	freopen("in.txt","r",stdin);
+	#endif
+
 	int num_sent;
 	int num_dic;
 
@@ -78,8 +83,9 @@ int main()
 
 int trie_tree::find_dic(string s)
 {
-	node* cur=root;
+	node* cur=root;	//root 是 trie_tree 的 private
 	int depth=s.size();
+	//先进入subnode，再增加num_of_sub
 	for(int i=0;i<depth;i++)
 	{
 		int ch=s[i]-'a';
@@ -101,8 +107,6 @@ void trie_tree::add_dic(string s)
 		if(cur->subnode[ch]==NULL)//不存在s[i]
 		{
 			cur->subnode[ch]=new node;
-
-			//num_of_sub++;
 		}
 		cur=cur->subnode[ch];
 		cur->num_of_sub++;
