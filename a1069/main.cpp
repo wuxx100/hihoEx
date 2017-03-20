@@ -1,3 +1,4 @@
+/* 此题没有真正求出每个的depth，正好使得每个的depth不同，而且depth与备份无关，可能辈分高depth更大（但是求depth最小并没有错） */
 #include <iostream>
 #include <map>
 #define MAXN 100005
@@ -97,6 +98,7 @@ void makeList()
 	}
 }
 
+/* pre_calc[i][minTm] 记载着从minTm开始，长度为2^i的一群人的最小的depth */
 int findList(int minTm,int maxTm)
 {
 	int len=maxTm-minTm+1;

@@ -89,7 +89,7 @@ int getFather(int valueNowQ)
 
 void findRealtion(int root)
 {
-	father[root]=root;
+	father[root]=root;	//令当前访问的节点的父节点为本身，与getFather配合，保证递归到此结束，找到共同parent
 	visited[root]=true;
 	int pos=header[root];
 	int valueNow;
@@ -121,8 +121,8 @@ void findRealtion(int root)
 	while(pos)
 	{
 		valueNow=nod[pos].value;
-		findRealtion(valueNow);
-		father[valueNow]=root;
+		findRealtion(valueNow);//进入之后，father[valueNow]=valueNow，查找以其为parent的点对
+		father[valueNow]=root;//到此，解开father[valueNow]=valueNow,使得之后可以继续查找，不会在子节点停止
 		pos=nod[pos].nextId;
 	}
 }
