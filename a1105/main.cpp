@@ -1,6 +1,7 @@
 /* This is the prectice to heap (a special Complete Binary Tree)*/
 /* it's the same to use heap or priority_queue */
 //http://blog.csdn.net/longhopefor/article/details/38303545
+//http://www.cppblog.com/Darren/archive/2009/06/09/87224.html
 #include <iostream>
 #include <algorithm>
 
