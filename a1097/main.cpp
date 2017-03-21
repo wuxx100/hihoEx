@@ -70,6 +70,7 @@ int findSmallestTree_prim(int numPoint)
 			if(!finished[i])
 			{
 				shortestPath[i]=min(shortestPath[i],way[point2Add][i]);
+				//通过比较现在的最短路和与新增点的距离更新最短路，与dij不同，dij是用最短路与路程求和更新
 			}
 		}
 	}
