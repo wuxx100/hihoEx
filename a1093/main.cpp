@@ -57,7 +57,6 @@ void findMinWay_SPFA(int start, int end, int numPoint)
 					{
 						Q.push(i);
 						inQueue[i]=true;
-						//cnt????
 					}
 				}
 			}
