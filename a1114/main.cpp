@@ -3,7 +3,7 @@
 #define MAX_N 100005
 using namespace std;
 
-int boom[MAX_N];
+int boom[MAX_N];			//题中显示的数字（周围有的地雷数）
 int firstSolution[MAX_N];
 int secondSolution[MAX_N];
 int boomPlace[MAX_N];
