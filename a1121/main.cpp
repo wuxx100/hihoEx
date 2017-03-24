@@ -1,6 +1,8 @@
 /* 稀疏边的图，可以用BFS（宽度优先搜索）/DFS（深度优先搜索），用指针实现多叉树
    在这里总结了BFS与DFS，很重要
+   判断此图是否是二分图
  */
+
 
 #include <iostream>
 #include <memory.h>
