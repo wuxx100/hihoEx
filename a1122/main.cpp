@@ -1,4 +1,5 @@
 /* 二分图中最多的匹配对 */
+
 #include <iostream>
 #include <memory.h>
 
@@ -28,6 +29,7 @@ void addEdge(int from, int to)
 	header[from]=edge;
 }
 
+//匈牙利算法
 bool finPath(int u)
 {
 	for(Edge* pos=header[u]; pos!=NULL; pos=pos->next)
@@ -37,7 +39,7 @@ bool finPath(int u)
 		checkedNode[pos->to]=1;							//设置此点查找过
 		if(pairForNode[pos->to]==0 || finPath(pairForNode[pos->to]))	//要么相连点未标记，要么“连襟”有剩下未标记的点
 		{
-			pairForNode[u]=pos->to;
+			pairForNode[u]=pos->to;						//更改匹配
 			pairForNode[pos->to]=u;
 			return true;
 		}
