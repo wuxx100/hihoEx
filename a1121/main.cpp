@@ -44,9 +44,8 @@ bool dfsCheck(int from)
 	{
 		//cout<<"From "<<from<<" marked "<<marked[from]<<endl;
 		//cout<<"To "<<pos->to<<" marked "<<marked[pos->to]<<endl;
-		if (pos->to==from) {pos=pos->next; continue;}
 		if (marked[pos->to]==marked[from]) return false;
-		if (!marked[pos->to])				//如果子节点标记了，看一不一样，不一样就错，一样就换枝，不会产生循环
+		if (!marked[pos->to])				//如果子节点标记了，看一不一样, 一样就错，不一样就换枝，不会产生循环
 			marked[pos->to]=3-marked[from];			
 		else {pos=pos->next; continue;}
 		if(!dfsCheck(pos->to)) return false;
@@ -61,7 +60,6 @@ bool dfsCheck(int from)
     	//cout<<"From "<<from<<" marked "<<marked[from]<<endl;
 		//cout<<"To "<<pos->to<<" marked "<<marked[pos->to]<<endl;
 
-        if(pos->to==from) continue;
         if(marked[pos->to]==marked[from]) return false;
         if(!marked[pos->to])
             marked[pos->to]=3-marked[from];
@@ -150,7 +148,7 @@ int main()
 
 		for(int i=1; i<=N && marked[i]==0; i++)
 		{
-			bool state=bfsCheck(i);
+			bool state=dfsCheck(i);
 			if(state==false) {cout<<"Wrong"<<endl; goto here;}//如果碰到错直接输出
 		}
 		cout<<"Correct"<<endl;								//确保所有都为对，再输出
