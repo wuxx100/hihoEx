@@ -1,4 +1,4 @@
-/* 二分图中最少的覆盖点 */
+/* 二分图中最少的覆盖点与最大独立集的点数 */
 
 #include <iostream>
 #include <memory.h>
@@ -47,7 +47,7 @@ bool finPath(int u)
 	return false;
 }
 
-void finPoint(int N)
+int finPoint(int N)
 {
 	for(int i=1; i<=N; i++)
 	{
@@ -65,8 +65,7 @@ void finPoint(int N)
 		if(pairForNode[i]!=0)
 			result++;
 	}
-
-	cout<<result/2<<endl;
+	return result/2; 
 }
 
 int main()
@@ -86,9 +85,9 @@ int main()
 		addEdge(to, from);
 	}
 
-	finPoint(N);
+	int minPoint=finPoint(N);
+	int maxIndiPoint=N-minPoint;		//最大独立集的点数 = 总点数 - 二分图最大匹配
 
-	
-	
-		
+	cout<<minPoint<<endl;
+	cout<<maxIndiPoint<<endl;
 }
