@@ -4,7 +4,7 @@ using namespace std;
 
 int arrayNow[MAX_N];
 
-
+/*
 int binarySearch(int  arrayNow[], int low, int high, int target)
 {
 	int result;
@@ -46,6 +46,34 @@ int binarySearch(int  arrayNow[], int low, int high, int target)
 	delete [] nowarrayNow;
 	return result;
 }
+*/
+
+//用while的好处是省了空间复杂度
+int binarySearch(int* arrayNow, int min, int max, int target)
+{
+	while(true)
+	{
+		int high=max, low=min;
+		int nowValue=arrayNow[low];
+		while(low<high)										//每次把一个小值放到左边，一个大值放到右边
+		{
+			while(low<high && nowValue<arrayNow[high])		//写low<high是防止大值与小值个数不匹配
+				high--;										//这样在只有大值或小值时，可以不用动
+			arrayNow[low]=arrayNow[high];
+
+			while(low<high && nowValue>arrayNow[low])
+				low++;
+			arrayNow[high]=arrayNow[low];
+		}
+		arrayNow[low]=nowValue;								//这句话在这里没用，但是在排序里就有用了
+		if (target<low)
+			max=low-1;
+		else if(target>low)
+			min=low+1;
+		else
+			return nowValue;
+	}
+}
 
 int main()
 {
@@ -67,8 +95,6 @@ int main()
 
 	else
 	{
-		//cout<<binarySearch(arrayNow, 4, 8, 8);
 		cout<<binarySearch(arrayNow, 0, N-1, k-1)<<endl;
 	}
-
 }
