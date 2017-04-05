@@ -1,3 +1,7 @@
+/* 这次用的是vector实现的多叉树，感觉更容易，应该建立的是vector<Node*>
+   但是因为题的原因，int满足，所以写的int
+ */
+
 #include <iostream>
 #include <memory.h>
 #include <vector>
