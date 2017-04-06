@@ -1,5 +1,7 @@
 /* 这次用的是vector实现的多叉树，感觉更容易，应该建立的是vector<Node*>
    但是因为题的原因，int满足，所以写的int
+   这个算法采用dfs，并且过一个点拆一条路，一旦所有路全被拆过以后，最后一点一定为终点
+   （无论是单数点，还是双数点）
  */
 
 #include <iostream>
@@ -28,8 +30,9 @@ void dfs(int beginForEdge)
 			dfs(endForEdge);
 		}
 	}
-	cout<<beginForEdge+1<<' ';
-}
+	cout<<beginForEdge+1<<' ';				//当所有子节点都被切断以后，再输出，就是终点
+}											//这个dfs套路与之前有小区别，用的是for，无需更新子节点
+											//并且在所有结束之后还有返回操作（cout，也可以压入栈）
 
 int main()
 {
