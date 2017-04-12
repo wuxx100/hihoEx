@@ -42,7 +42,7 @@ int main()
 		else if(ops=='T')
 		{
 			pop_heap(surgar,surgar+surgarNum);
-			surgarNum--;
+			surgarNum--;							//surgarNum保存的是个空（不用），--后保存的是最大根
 			cout<<surgar[surgarNum]<<endl;
 		}
 	}
