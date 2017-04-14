@@ -184,6 +184,20 @@ void MergeSort(int* min, int* max)
 	}
 }
 
+//平均复杂度 o(n^2)
+//空间复杂度 总共o(n),每次o(1)
+void BubbleSort(int* min, int* max)
+{
+	for(int*p = min; p<max-1; p++)
+	{
+		for(int* q= min; q<max-1-(p-min);q++)
+		{
+			if(*q>*(q+1))
+				swap(*q,*(q+1));
+		}
+	}
+}
+
 
 
 #endif
