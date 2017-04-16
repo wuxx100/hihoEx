@@ -1,5 +1,5 @@
 #include <iostream>
-#include "test.h"
+#include "test_sort.h"
 #include <time.h>
 
 using namespace std;
@@ -16,10 +16,11 @@ void sortBy(void(*op)(int* , int* ),int* copyTestArray, int sizeForArray)
 
 	//t_end=time(NULL);
 	t_end=clock();
-
+	/*
 	for(int i=0; i<sizeForArray; i++)
 		cout<<copyTestArray[i]<<' ';
 	cout<<endl;
+	*/
 	cout<<t_end-t_start<<endl;
 }
 
@@ -36,11 +37,12 @@ int main()
 	}
 
 
-	QuickSort(testArray,testArray+totalNum);
-
+	sortBy(BubbleSort,testArray,totalNum);
+	/*
 	for(int i=0; i<totalNum; i++)
 		cout<<testArray[i]<<' ';
 	cout<<endl;
+	*/
 
 	delete [] testArray;
 }
