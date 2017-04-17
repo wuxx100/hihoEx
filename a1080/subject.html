@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta property="qc:admins" content="25115412737374526375" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>hihoCoder</title>
+		<!--[if lt IE 9]>
+	    	<script type="text/javascript" src="https://static.hihocoder.com/js/libs/html5.js?1457224552.js"></script>
+	    <![endif]-->
+	    <link href="https://static.hihocoder.com/images/hiho.ico" rel="shortcut icon" type="image/x-icon">
+		<link type="text/css" rel="stylesheet" href="https://static.hihocoder.com/styles/home.css?1488861889.css">
+		<script type="text/javascript" src="https://static.hihocoder.com/js/libs/jquery-1.10.2.min.js?1457224552.js"></script>
+		<script type="text/javascript" src="https://static.hihocoder.com/js/api.js?1487424150.js"></script>
+		<script type="text/javascript" src="https://static.hihocoder.com/js/common.js?1487424150.js"></script>
+		<script type="text/javascript" src="https://static.hihocoder.com/js/framework/dropdown.js?1457224552.js"></script>
+		<script type="text/javascript" src="https://static.hihocoder.com/js/framework/button.js?1457224552.js"></script>
+		<script type="text/javascript" src="https://static.hihocoder.com/js/framework/alert.js?1457224552.js"></script>
+		<script type="text/javascript" src="https://static.hihocoder.com/js/libs/tab.js?1457224552.js"></script>
+		<script type="text/javascript" src="https://static.hihocoder.com/js/framework/collapse.js?1457224552.js"></script>
+		<script type="text/javascript" src="https://static.hihocoder.com/js/framework/tooltip.js?1457224552.js"></script>
+		<script type="text/javascript" src="https://static.hihocoder.com/js/framework/modal.js?1457224552.js"></script>
+		<script type="text/javascript" src="https://static.hihocoder.com/js/framework/tag.js?1457224552.js"></script>
+		<script type="text/javascript" src="https://static.hihocoder.com/js/framework/discuss.js?1457224552.js"></script>
+		<script type="text/javascript" src="https://static.hihocoder.com/js/framework/contest.js?1457224552.js"></script>
+        <script type="text/javascript" src="https://static.hihocoder.com/js/framework/popover.js?1457224552.js"></script>
+		<script type="text/javascript">
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?9334676254a219943ea90c19530c3bec";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+			<nav id="tl-top-navbar" class="navbar navbar-inverse">
+<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse">
+		<div class="container">
+			<a class="navbar-brand" href="/">hihocoder</a>
+			<ul class="nav navbar-nav">
+								<li>
+					<a href="/hiho">hiho一下</a></li>
+				<li>
+					<a href="/contests" class="fire">比赛<span class="icon-fire"></span></a>
+				</li>
+				<li>
+					<a href="/problemset">题库</a></li>
+				<li>
+					<a href="/discuss">讨论</a></li> 
+							</ul>
+			<ul class="nav navbar-nav navbar-right">
+								<!-- <li><a href="/notifications">消息</a></li>  -->	
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">hallojiong <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="/user/72549">个人主页</a></li>
+						<li><a href="/settings">账户设置</a></li>
+						<li class="divider"></li>
+						<li><a href="javascript:api.logout();">退出</a></li>
+					</ul>
+				</li>
+							</ul>
+		</div>
+	</div><!-- /.navbar-collapse -->
+</nav>				<nav class="tl-subnav">
+		<div class="container clearfix">
+			<h3 class="tl-subnav-title">题库</h3>
+			<ul class="tl-subnav-menu">
+				<li ><a href="/problemset">所有题目</a></li>
+				<li ><a href="/problemset/submitted">我的提交</a></li>
+			</ul>
+		</div>
+	</nav>
+
+			<div id="content" class="container">
+				<div class="row">
+	<div id="main" class="col-xs-main">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">#1080 : 更为复杂的买卖房屋姿势</h3>
+			</div>
+			<div class="panel-body">
+				<!-- 
+parameter:
+	@time_limit
+	@case_time_limit
+	@memory_limit
+	@description
+	@sample_input
+	@sample_output		
+-->
+<div id="tl-problem-content">
+	<div class="limit">
+		<div>时间限制:<span style="margin-left: 10px;">10000ms</span></div>
+		<div>单点时限:<span style="margin-left: 10px;">1000ms</span></div>
+		<div>内存限制:<span style="margin-left: 10px;">256MB</span></div>		
+	</div>
+	<table></table>
+	<dl class="des">
+		<div><h4 style="font-weight:bold;">描述</h4><p>小Hi和小Ho都是游戏迷，“模拟都市”是他们非常喜欢的一个游戏，在这个游戏里面他们可以化身上帝模式，买卖房产。</p><p>在这个游戏里，会不断的发生如下两种事件：一种是房屋自发的涨价或者降价，而另一种是政府有关部门针对房价的硬性调控。房价的变化自然影响到小Hi和小Ho的决策，所以他们希望能够知道任意时刻某个街道中所有房屋的房价总和是多少——但是很不幸的，游戏本身并不提供这样的计算。不过这难不倒小Hi和小Ho，他们将这个问题抽象了一下，成为了这样的问题：</p><p>小Hi和小Ho所关注的街道的长度为N米，从一端开始每隔1米就有一栋房屋，依次编号为<strong>0..N</strong>，在游戏的最开始，每栋房屋都有一个初始价格，其中编号为i的房屋的初始价格为p_i，之后共计发生了M次事件，所有的事件都是对于编号连续的一些房屋发生的，其中第i次事件如果是房屋自发的涨价或者降价，则被描述为三元组(L_i, R_i, D_i)，表示编号在[L_i, R_i]范围内的房屋的价格的增量（即正数为涨价，负数为降价）为D_i；如果是政府有关部门针对房价的硬性调控，则被描述为三元组(L_i, R_i, V_i)，表示编号在[L_i, R_i]范围内的房屋的价格全部变为V_i。而小Hi和小Ho希望知道的是——每次事件发生之后，这个街道中所有房屋的房价总和是多少。</p><!-- Button trigger modal --><p><a href="#" data-toggle="modal" data-target="#myModal">提示：这是练习向的一周~</a></p><!-- Modal --><div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"> &nbsp; &nbsp; &nbsp; &nbsp;<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> &nbsp; &nbsp; &nbsp; &nbsp;<h4 class="modal-title" id="myModalLabel">提示：这是练习向的一周~</h4></div><div class="modal-body"><p>小Hi道：“小Ho，最近你也学了很多线段树的知识了，而现在我们遇到的这个问题其实也就是之前问题略微复杂化的版本，你有什么想法么？”</p><p>小Ho道：“唔……查询仍然是很简单，很明显我们可以知道维护的值是区间和，但是问题在于有两种修改操作——并且都是区间修改，也就是说如果我使用懒惰标记来维护修改的话，我就只需要处理好这两种操作之间的冲突咯？简单！”</p><p>“既然你说简单，那你就去试试好咯？~”小Hi笑道。</p><p>于是半天后，小Ho晕头转向的回来了：“不行啊，分支情况太多，整理不清楚。”</p><p>“那我就跟你讲个法子，首先你要弄清楚每个节点维护的值是标记时立即更新还是标记释放之后再更新。”小Hi道。</p><p>“这……一般标记打上之后都会马上用它的值更新父亲节点，所以应该是立即更新的吧！”小Ho想了想道。</p><p>“所以你可以把下放标记作为一个单独的方法拎出来，然后每次访问到一个节点的时候，不管三七二十一先执行了这个方法先。”小Hi写了写，递给了小Ho。</p><img src="http://media.hihocoder.com/problem_images/20141129/14172491008888.png" style="width:100%;" title="1.png" /><p>“这样的话，我每次进行新的修改操作的时候，都可以确保当前节点上没有任何的懒惰标记……那不就很简单了！”小Ho点了点头。</p><p>“先等你通过了再说简单吧！”小Ho嘿嘿笑道。</p></div><div class="modal-footer"> &nbsp; &nbsp; &nbsp; &nbsp;<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> &nbsp; &nbsp; &nbsp;</div></div></div></div><h4 style="font-weight:bold;">输入</h4><p>每个测试点（输入文件）有且仅有一组测试数据。</p><p>每组测试数据的第1行为两个整数N、M，分别表示街道的长度和总共发生的事件数。</p><p>每组测试数据的第2行为N+1个整数，其中第i个整数位p_i，表示编号为i的房屋的初始价格。</p><p>每组测试数据的第3-M+2行，按照发生的时间顺序，每行描述一个事件，如果该行描述的事件为，“房屋自发的涨价或者降价”，则该行为4个整数0, L_i, R_i, D_i，意义如前文所述；如果该行描述的事件为“政府有关部门针对房价的硬性调控”，则该行为4个整数1, L_i, R_i, V_i，意义如前文所述。</p><p>对于100%的数据，满足N&lt;=10^5，1&lt;=p_i, |D_i|, V_i&lt;=10^4，0&lt;=l_i&lt;r_i&lt;=n。&lt;&gt;</p><p>对于100%的数据，满足在任意时刻，任何房屋的价格都处于[1, 10^4]内。</p><h4 style="font-weight:bold;">输出</h4><p>对于每组测试数据，输出M行，其中第i行为一个整数Ans_i，表示第i次事件发生之后，这个街道中所有房屋的房价总和。</p><!--=10^4，0<=l_i&ltr_i<=n。<--><p><br/></p></div>
+		<dt>样例输入</dt>
+		<dd>
+			<pre>10 6
+3195 2202 4613 3744 2892 4858 619 5079 9478 7366 8942 
+0 1 6 886
+1 0 2 9710
+1 0 10 7980
+0 4 9 -7594
+0 2 8 1581
+0 4 4 -1010</pre>
+		</dd>
+		<dt>样例输出</dt>
+		<dd>
+			<pre>58304
+75652
+87780
+42216
+53283
+52273
+</pre>
+		</dd>
+	</dl>
+</div>			</div>
+		</div>
+		<!--
+	@form_action
+	@form_onsubmit
+	@contest_id
+	@problem_id
+-->
+<article class="tl-code-editor">
+	<form id="h-form-code-editor" class="form-horizontal" action="/api/problem/submit.json" method="post" onsubmit="document.getElementById('source-input').value=window.aceEditor.getSession().getValue();$(this).ajaxsubmit(Callbacks.redirect('url'));return false;">
+		<input class="hide" name="contest-id" value="0" />
+		<input class="hide" name="problem-id" value="1080" />
+		<input id="source-input" name="source" value="" type="hidden" />
+		<header class="tl-code-editor-toolbar clearfix">
+			<div class="btn-group">
+				<a data-keyboard="emacs" class="h-toggle-keyboard btn btn-default emacs">Emacs</a>
+				<a data-keyboard="normal" class="h-toggle-keyboard btn btn-default normal active">Normal</a>
+				<a data-keyboard="vim" class="h-toggle-keyboard btn btn-default vim">Vim</a>
+			</div>
+			<div class="toggle-screen">
+				<a class="h-fullscreen"><span class="icon-fullscreen"></span></a>
+			</div>
+			<select name="language" class="tl-code-editor-lang h-select-lang">
+								<option value="GCC" >GCC</option>
+				<option value="G++" selected>G++</option>
+								<option value="C#" >C#</option>
+								<option value="Java" >Java</option>
+								<option value="Python2" >Python2</option>
+											</select>
+		</header>
+		<div class="tl-code-editor-content">
+			<pre id="code-editor" style="height:500px;position:relative;font-size:16px;line-height:17px"></pre>
+		</div>
+		<footer class="tl-code-editor-footer clearfix">
+						<div class="r">
+								<button type="submit" class="btn btn-success">提交</button>
+			</div>
+		</footer>
+	</form>
+</article>
+<script type="text/javascript" src="https://static.hihocoder.com/ace/ace.js?1457224552.js"></script>
+<script type="text/javascript" src="https://static.hihocoder.com/ace/mode-c_cpp.js?1457224552.js"></script>
+<script type="text/javascript" src="https://static.hihocoder.com/ace/mode-csharp.js?1457224552.js"></script>
+<script type="text/javascript" src="https://static.hihocoder.com/ace/mode-java.js?1457224552.js"></script>
+<script type="text/javascript" src="https://static.hihocoder.com/ace/mode-python.js?1457224552.js"></script>
+<script type="text/javascript" src="https://static.hihocoder.com/ace/theme-chrome.js?1457224552.js"></script>
+<script type="text/javascript" src="https://static.hihocoder.com/ace/keybinding-emacs.js?1457224552.js"></script>
+<script type="text/javascript" src="https://static.hihocoder.com/ace/keybinding-vim.js?1457224552.js"></script>
+
+	</div>
+	
+	<div id="side" class="col-xs-side">
+		<div class="problem-stats panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">统计</h3>
+			</div>
+			<div class="panel-body">
+				<dl>
+					<dt>添加时间</dt>
+					<dd>2014-12-06</dd>
+					<dt>提交次数</dt>
+					<dd>1716</dd>
+					<dt>提交人数</dt>
+					<dd>330</dd>
+					<dt>通过人数</dt>
+					<dd>296</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="problem-tags panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">标签</h3>
+			</div>
+			<div class="panel-body">
+												<a class="badge">线段树</a>
+							</div>
+		</div>
+		<div class="problem-source panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">题目来源</h3>
+			</div>
+			<div class="panel-body">
+				hiho一下第二十二周			</div>
+		</div>
+		<!-- <a href="#" class="btn btn-success" style="width:100%;">讨论</a>   -->
+	</div>
+</div>
+
+<!--
+	@form_action
+	@form_onsubmit
+	@contest_id
+	@problem_id
+-->
+<div id="fullscreen-code-editor-wrap" class="tl-fullscreen-wrap hide">
+	<div class="left-bar">
+		<!-- 
+parameter:
+	@time_limit
+	@case_time_limit
+	@memory_limit
+	@description
+	@sample_input
+	@sample_output		
+-->
+<div id="tl-problem-content">
+	<div class="limit">
+		<div>时间限制:<span style="margin-left: 10px;">10000ms</span></div>
+		<div>单点时限:<span style="margin-left: 10px;">1000ms</span></div>
+		<div>内存限制:<span style="margin-left: 10px;">256MB</span></div>		
+	</div>
+	<table></table>
+	<dl class="des">
+		<div><h4 style="font-weight:bold;">描述</h4><p>小Hi和小Ho都是游戏迷，“模拟都市”是他们非常喜欢的一个游戏，在这个游戏里面他们可以化身上帝模式，买卖房产。</p><p>在这个游戏里，会不断的发生如下两种事件：一种是房屋自发的涨价或者降价，而另一种是政府有关部门针对房价的硬性调控。房价的变化自然影响到小Hi和小Ho的决策，所以他们希望能够知道任意时刻某个街道中所有房屋的房价总和是多少——但是很不幸的，游戏本身并不提供这样的计算。不过这难不倒小Hi和小Ho，他们将这个问题抽象了一下，成为了这样的问题：</p><p>小Hi和小Ho所关注的街道的长度为N米，从一端开始每隔1米就有一栋房屋，依次编号为<strong>0..N</strong>，在游戏的最开始，每栋房屋都有一个初始价格，其中编号为i的房屋的初始价格为p_i，之后共计发生了M次事件，所有的事件都是对于编号连续的一些房屋发生的，其中第i次事件如果是房屋自发的涨价或者降价，则被描述为三元组(L_i, R_i, D_i)，表示编号在[L_i, R_i]范围内的房屋的价格的增量（即正数为涨价，负数为降价）为D_i；如果是政府有关部门针对房价的硬性调控，则被描述为三元组(L_i, R_i, V_i)，表示编号在[L_i, R_i]范围内的房屋的价格全部变为V_i。而小Hi和小Ho希望知道的是——每次事件发生之后，这个街道中所有房屋的房价总和是多少。</p><!-- Button trigger modal --><p><a href="#" data-toggle="modal" data-target="#myModal">提示：这是练习向的一周~</a></p><!-- Modal --><div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"> &nbsp; &nbsp; &nbsp; &nbsp;<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> &nbsp; &nbsp; &nbsp; &nbsp;<h4 class="modal-title" id="myModalLabel">提示：这是练习向的一周~</h4></div><div class="modal-body"><p>小Hi道：“小Ho，最近你也学了很多线段树的知识了，而现在我们遇到的这个问题其实也就是之前问题略微复杂化的版本，你有什么想法么？”</p><p>小Ho道：“唔……查询仍然是很简单，很明显我们可以知道维护的值是区间和，但是问题在于有两种修改操作——并且都是区间修改，也就是说如果我使用懒惰标记来维护修改的话，我就只需要处理好这两种操作之间的冲突咯？简单！”</p><p>“既然你说简单，那你就去试试好咯？~”小Hi笑道。</p><p>于是半天后，小Ho晕头转向的回来了：“不行啊，分支情况太多，整理不清楚。”</p><p>“那我就跟你讲个法子，首先你要弄清楚每个节点维护的值是标记时立即更新还是标记释放之后再更新。”小Hi道。</p><p>“这……一般标记打上之后都会马上用它的值更新父亲节点，所以应该是立即更新的吧！”小Ho想了想道。</p><p>“所以你可以把下放标记作为一个单独的方法拎出来，然后每次访问到一个节点的时候，不管三七二十一先执行了这个方法先。”小Hi写了写，递给了小Ho。</p><img src="http://media.hihocoder.com/problem_images/20141129/14172491008888.png" style="width:100%;" title="1.png" /><p>“这样的话，我每次进行新的修改操作的时候，都可以确保当前节点上没有任何的懒惰标记……那不就很简单了！”小Ho点了点头。</p><p>“先等你通过了再说简单吧！”小Ho嘿嘿笑道。</p></div><div class="modal-footer"> &nbsp; &nbsp; &nbsp; &nbsp;<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> &nbsp; &nbsp; &nbsp;</div></div></div></div><h4 style="font-weight:bold;">输入</h4><p>每个测试点（输入文件）有且仅有一组测试数据。</p><p>每组测试数据的第1行为两个整数N、M，分别表示街道的长度和总共发生的事件数。</p><p>每组测试数据的第2行为N+1个整数，其中第i个整数位p_i，表示编号为i的房屋的初始价格。</p><p>每组测试数据的第3-M+2行，按照发生的时间顺序，每行描述一个事件，如果该行描述的事件为，“房屋自发的涨价或者降价”，则该行为4个整数0, L_i, R_i, D_i，意义如前文所述；如果该行描述的事件为“政府有关部门针对房价的硬性调控”，则该行为4个整数1, L_i, R_i, V_i，意义如前文所述。</p><p>对于100%的数据，满足N&lt;=10^5，1&lt;=p_i, |D_i|, V_i&lt;=10^4，0&lt;=l_i&lt;r_i&lt;=n。&lt;&gt;</p><p>对于100%的数据，满足在任意时刻，任何房屋的价格都处于[1, 10^4]内。</p><h4 style="font-weight:bold;">输出</h4><p>对于每组测试数据，输出M行，其中第i行为一个整数Ans_i，表示第i次事件发生之后，这个街道中所有房屋的房价总和。</p><!--=10^4，0<=l_i&ltr_i<=n。<--><p><br/></p></div>
+		<dt>样例输入</dt>
+		<dd>
+			<pre>10 6
+3195 2202 4613 3744 2892 4858 619 5079 9478 7366 8942 
+0 1 6 886
+1 0 2 9710
+1 0 10 7980
+0 4 9 -7594
+0 2 8 1581
+0 4 4 -1010</pre>
+		</dd>
+		<dt>样例输出</dt>
+		<dd>
+			<pre>58304
+75652
+87780
+42216
+53283
+52273
+</pre>
+		</dd>
+	</dl>
+</div>	</div>
+	<div class="separator"></div>
+	<div class="right-bar">
+		<article class="tl-code-editor">
+			<form id="h-form-full-code-editor" class="form-horizontal" action="/api/problem/submit.json" method="post" onsubmit="document.getElementById('full-source-input').value=window.aceFullEditor.getSession().getValue();$(this).ajaxsubmit(Callbacks.redirect('url'));return false;">
+				<input class="hide" name="contest-id" value="0" />
+				<input class="hide" name="problem-id" value="1080" />
+				<input id="full-source-input" name="source" value="" type="hidden" />
+				<header class="tl-code-editor-toolbar clearfix">
+					<div class="btn-group">
+						<a data-keyboard="emacs" class="h-toggle-keyboard btn btn-default emacs">Emacs</a>
+						<a data-keyboard="normal" class="h-toggle-keyboard btn btn-default normal active">Normal</a>
+						<a data-keyboard="vim" class="h-toggle-keyboard btn btn-default vim">Vim</a>
+					</div>
+					<div class="toggle-screen">
+						<a href="" class="h-resize-screen"><span class="icon-resize-small"></span></a>
+					</div>
+					<select name="language" class="tl-code-editor-lang h-select-lang">
+												<option value="GCC" >GCC</option>
+						<option value="G++" selected>G++</option>
+												<option value="C#" >C#</option>
+												<option value="Java" >Java</option>
+												<option value="Python2" >Python2</option>
+																	</select>
+				</header>
+				<div class="tl-code-editor-content">
+					<pre id="fullscreen-code-editor" style="height:500px;position:relative;font-size:16px;line-height:17px"></pre>
+				</div>
+				<footer class="tl-code-editor-footer clearfix">
+										<div class="r">
+												<button type="submit" class="btn btn-success">提交</button>
+					</div>
+				</footer>
+			</form>
+		</article>
+ 			</div>
+</div>
+	
+<script type="text/javascript" src="https://static.hihocoder.com/js/code-editor.js?1457224552.js"></script><script type="text/javascript">
+	var mode = {
+			'GCC'  :'ace/mode/c_cpp',
+			'G++'  :'ace/mode/c_cpp',
+			'C#'   :'ace/mode/csharp',
+			'Java' :'ace/mode/java',
+			'Python2' :'ace/mode/python',
+			'Python3' :'ace/mode/python'
+	};	
+	var editor = window.aceEditor;
+	var fullEditor = window.aceFullEditor;
+	editor.setTheme('ace/theme/tomorrow_night_eighties');
+		editor.getSession().setMode(mode['G++']);
+	fullEditor.getSession().setMode(mode['G++']);
+		    editor.getSession().setValue("");
+    fullEditor.getSession().setValue("");
+    </script>
+<script type="text/javascript">
+	var sec = 'dontwakemeup';
+	var editor = window.aceEditor;
+	var fullEditor = window.aceFullEditor;
+	editor.on("change", function(e) {
+		if(editor.isFocused()) {
+			//console.log("editor: " + e.data);
+			var deltas = new Array();
+			deltas[0] = e.data;
+			fullEditor.getSession().getDocument().applyDeltas(deltas);
+					}
+	});
+	editor.getSession().on("changeScrollTop", function(e) {
+		if(editor.isFocused()) {
+			fullEditor.getSession().setScrollTop(parseInt(e));
+			//console.log("editor scroll: " + parseInt(e));
+					}
+	});
+	editor.getSession().on("changeScrollLeft", function(e) {
+		if(editor.isFocused()) {
+			fullEditor.getSession().setScrollLeft(parseInt(e));
+			//console.log("editor scroll: " + parseInt(e));
+					}
+	});
+	fullEditor.on("change", function(e) {
+		if(fullEditor.isFocused()) {
+			var deltas = new Array();
+			deltas[0] = e.data;
+			editor.getSession().getDocument().applyDeltas(deltas);
+					}
+	});
+	fullEditor.getSession().on("changeScrollTop", function(e) {
+		if(fullEditor.isFocused()) {
+			editor.getSession().setScrollTop(parseInt(e));
+					}
+	});
+	fullEditor.getSession().on("changeScrollLeft", function(e) {
+		if(fullEditor.isFocused()) {
+			editor.getSession().setScrollLeft(parseInt(e));
+					}
+	});
+</script>
+			</div>
+		</div>
+        <a id="gotop" href="#">
+            <span>▲</span>
+        </a>
+		<footer id="tl-footer">
+	<div class="container tl-footer-lg">
+		<div class="row">
+			<div class="col-xs-8">
+				<div class="row">
+					<div class="col-xs-3">
+						<h4>关于我们</h4>
+						<ul>
+							<li><a href="/about-us#website-desc">网站介绍</a></li>
+							<li><a href="/about-us#team-desc">团队介绍</a></li>
+							<li><a href="/about-us#connect-us">联系方式</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-3">
+						<h4>hihoCoder</h4>
+						<ul>
+							<li><a href="/hiho">hiho一下</a></li>
+							<li><a href="/contests">比赛</a></li>
+							<li><a href="/discuss">讨论</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-3">
+						<h4>帮助中心</h4>
+						<ul>
+							<li><a href="/help-center/coder-help">答题帮助</a></li>
+																				</ul>
+					</div>
+					<div class="col-xs-3">
+						<h4>关注我们</h4>
+						<ul>
+							<li><a href="http://weibo.com/u/3473063194" target="_blank" title="hihoCoder新浪微博" class="connect-icon sina-weibo">新浪微博</a></li>
+                        <li><a data-container="body" id="weixin" data-toggle="popover" data-placement="top" data-html="true" data-content="<img style='width:150px;' src='https://static.hihocoder.com/images/weixin.jpg'>" data-trigger="hover" style="cursor: pointer;">微信公众号</a></li>
+                        <li><a href="http://page.renren.com/601893290" target="_blank" title="hihoCoder人人公共主页">人人公众主页</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-4 side">
+				<h4>联系我们</h4>
+				<address>
+					<p>北京市海淀区中关村购物广场西侧 善缘街1号 立方庭大厦</p>
+					<a href="mailto:webmaster@hihocoder.com">webmaster@hihocoder.com</a>
+				</address>
+			</div>
+		</div>
+	</div>
+	
+	<div class="tl-footer-sm">
+		<p>© 2017 hihoCoder 沪ICP备14022864号</p>
+			</div>
+</footer>
+<script type="text/javascript">
+    $(function () {
+        $("#weixin").popover()
+    })
+</script>	</body>
+</html>
