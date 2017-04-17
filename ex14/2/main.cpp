@@ -51,7 +51,6 @@ int main()
 		poss[i]=p;
 		imposs[i]=1-p;
 	}
-	memset(result,0,maxtimes*maxtimes*sizeof(int));
 	getRes(N,M,poss,imposs);
 	cout<<result[N][M]<<endl;
 }

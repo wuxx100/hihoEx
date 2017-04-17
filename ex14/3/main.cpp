@@ -17,7 +17,11 @@ int main()
 		cin>>father>>son;
 		//cout<<"father"<<father<<"son"<<son<<endl;
 		//cout<<fatherLine[son]<<' '<<line<<endl;
-		
+		if(son==1)
+    	{
+    	    cout<<line<<endl;
+    	    return 0;
+    	}
     	if(father==son) 
     	{
       		cout<<line<<endl;
