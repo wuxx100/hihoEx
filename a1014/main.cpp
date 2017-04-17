@@ -1,5 +1,6 @@
 /*Trie树的使用*/
 #include <iostream>
+#include <memory.h>
 #include <vector>
 using namespace std;
 
