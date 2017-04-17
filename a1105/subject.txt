@@ -1,0 +1,14 @@
+https://hihocoder.com/problemset/problem/1105
+#1105 : 题外话·堆
+
+Sample Input: 
+5
+A 77751
+A 1329
+A 26239
+A 80317
+T
+
+
+Sample Output: 
+80317

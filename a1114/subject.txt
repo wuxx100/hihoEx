@@ -1,0 +1,15 @@
+https://hihocoder.com/problemset/problem/1114
+#1114 : 小Hi小Ho的惊天大作战：扫雷·一
+
+Sample Input: 
+2
+3
+1 1 1
+10
+1 2 1 2 2 3 2 2 2 2 
+
+Sample Output: 
+1 2
+2 1 3
+7 1 3 5 6 7 9 10 
+3 2 4 8 

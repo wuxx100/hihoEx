@@ -1,0 +1,8 @@
+https://hihocoder.com/problemset/problem/1143
+#1143 : 骨牌覆盖问题·一
+
+Sample Input: 
+62247088
+
+Sample Output: 
+17748018

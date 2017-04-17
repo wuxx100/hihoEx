@@ -1,0 +1,13 @@
+https://hihocoder.com/problemset/problem/1032
+#1032 : 最长回文子串
+
+Sample Input: 
+3
+abababa
+aaaabaa
+acacdas
+
+Sample Output: 
+7
+5
+3

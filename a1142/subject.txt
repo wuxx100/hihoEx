@@ -1,0 +1,8 @@
+https://hihocoder.com/problemset/problem/1142
+#1142 : 三分·三分求极值
+
+Sample Input: 
+2 8 2 -2 6
+
+Sample Output: 
+2.437

@@ -27,36 +27,40 @@ for aFloder in allFolder:
         soup = BeautifulSoup(text, "lxml")
         bodyWords = soup.body
 
-        aFilePath = nowFolder + '/' + aFloder + '/'+'subject.html'
+        aFilePath = nowFolder + '/' + aFloder + '/'+'subject.txt'
+
+
+        if os.path.isfile(nowFolder + '/' + aFloder + '/'+'subject.html'):
+            os.remove(nowFolder + '/' + aFloder + '/' + 'subject.html')
         print '-' * 100
         print 'downloading to:',aFilePath
         with open(aFilePath, 'wb') as filedown:
 
             ## 保持汉字
-            filedown.write('<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <p>'
-                           +url+'</p>')
+            # filedown.write('<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <p>'
+            filedown.write(url+'\n')
 
             ## 输入题目
             for title in bodyWords.findAll('h3'):  ##title=<h3 class='...'>lalala</h3>
                 if re.search('#', title.string):
-                    filedown.write('p'+title.string.encode("utf-8")+'</p>')
+                    filedown.write(title.string.encode("utf-8"))
 
             ## 输入输出
             input = 0
             output = 0
             for mark in bodyWords.findAll('dt'):
                 if re.search('Sample Input',mark.string) and input==0:
-                    filedown.write('<p> input: </p>')
-                    filedown.write(mark.next_sibling.next_sibling.encode())
+                    filedown.write('\n\nSample Input: \n')
+                    filedown.write(mark.next_sibling.next_sibling.contents[1].string)
                     input=1
                 if re.search('Sample Output',mark.string) and output==0:
-                    filedown.write('<p> output: </p>')
-                    filedown.write(mark.next_sibling.next_sibling.encode())
+                    filedown.write('\n\nSample Output: \n')
+                    filedown.write(mark.next_sibling.next_sibling.contents[1].string)
                     output=1
 
             ## 题目介绍
-            for passage in bodyWords.findAll('p'):
-                filedown.write(passage.encode("utf-8"))
+            # for passage in bodyWords.findAll('p'):
+            #     filedown.write(passage.encode("utf-8"))
 
 
         filedown.close()

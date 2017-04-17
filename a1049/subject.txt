@@ -1,0 +1,9 @@
+https://hihocoder.com/problemset/problem/1049
+#1049 : 后序遍历
+
+Sample Input: 
+AB
+BA
+
+Sample Output: 
+BA

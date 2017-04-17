@@ -1,0 +1,23 @@
+https://hihocoder.com/problemset/problem/1014
+#1014 : Trie树
+
+Sample Input: 
+5
+babaab
+babbbaaaa
+abba
+aaaaabaa
+babaababb
+5
+babb
+baabaaa
+bab
+bb
+bbabbaab
+
+Sample Output: 
+1
+0
+3
+0
+0

@@ -1,0 +1,15 @@
+https://hihocoder.com/problemset/problem/1036
+#1036 : Trie图
+
+Sample Input: 
+6
+aaabc
+aaac
+abcc
+ac
+bcd
+cd
+aaaaaaaaaaabaaadaaac
+
+Sample Output: 
+YES

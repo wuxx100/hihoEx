@@ -1,0 +1,18 @@
+https://hihocoder.com/problemset/problem/1069
+#1069 : 最近公共祖先·三
+
+Sample Input: 
+4
+Adam Sam
+Sam Joey
+Sam Micheal
+Adam Kevin
+3
+Sam Sam
+Adam Sam
+Micheal Kevin
+
+Sample Output: 
+Sam
+Adam
+Adam

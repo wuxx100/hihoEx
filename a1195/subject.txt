@@ -1,0 +1,11 @@
+https://hihocoder.com/problemset/problem/1195
+#1195 : 高斯消元·一
+
+Sample Input: 
+2 2
+2 1 5
+1 2 4
+
+Sample Output: 
+2
+1

@@ -1,0 +1,13 @@
+https://hihocoder.com/problemset/problem/1079
+#1079 : 离散化
+
+Sample Input: 
+5 10
+4 10
+0 2
+1 6
+5 9
+3 4
+
+Sample Output: 
+5

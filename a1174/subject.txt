@@ -1,0 +1,15 @@
+https://hihocoder.com/problemset/problem/1174
+#1174 : 拓扑排序·一
+
+Sample Input: 
+2
+2 2
+1 2
+2 1
+3 2
+1 2
+1 3
+
+Sample Output: 
+Wrong
+Correct

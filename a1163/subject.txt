@@ -1,0 +1,9 @@
+https://hihocoder.com/problemset/problem/1163
+#1163 : 博弈游戏·Nim游戏
+
+Sample Input: 
+3
+3 2 1
+
+Sample Output: 
+Bob

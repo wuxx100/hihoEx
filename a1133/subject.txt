@@ -1,0 +1,9 @@
+https://hihocoder.com/problemset/problem/1133
+#1133 : 二分·二分查找之k小数
+
+Sample Input: 
+10 4
+1732 4176 2602 6176 1303 6207 3125 1 1011 6600
+
+Sample Output: 
+1732

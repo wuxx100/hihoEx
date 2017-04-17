@@ -1,0 +1,9 @@
+https://hihocoder.com/problemset/problem/1048
+#1048 : 状态压缩·二
+
+Sample Input: 
+2 4
+
+
+Sample Output: 
+5
