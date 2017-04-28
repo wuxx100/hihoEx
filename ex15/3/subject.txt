@@ -1,0 +1,14 @@
+https://hihocoder.com/contest/offers15/problem/3
+题目3 : 过河问题
+
+Sample Input: 
+4 2
+2 2 1
+1 2
+2 3
+0 1
+0 2
+0
+
+Sample Output: 
+7
