@@ -17,10 +17,16 @@ pair<int , int > getNextStep(int x, int y, int i)
 	int nextY=y;
 	while(1)
 	{
-		if(mapOfMaze[nextX][nextY] == '.' || mapOfMaze[nextX][nextY]=='T' || mapOfMaze[nextX][nextY]=='S')
+		if(mapOfMaze[nextX][nextY] == '.' || mapOfMaze[nextX][nextY]=='S')
 		{
 			nextX=nextX+xStep[i];
 			nextY=nextY+yStep[i];
+		}
+		else if(mapOfMaze[nextX][nextY]=='T')
+		{
+			nextX=nextX+xStep[i];
+			nextY=nextY+yStep[i];
+			break;
 		}
 		else
 			break;
