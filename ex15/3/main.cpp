@@ -1,3 +1,5 @@
+//使用二进制，操作并，左移等操作
+//http://www.cnblogs.com/Robotke1/archive/2013/05/06/3063295.html
 #include <iostream>
 #include <memory.h>
 #include <queue>
