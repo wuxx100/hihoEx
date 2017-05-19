@@ -1,0 +1,187 @@
+{\rtf1\ansi\ansicpg936\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fnil\fcharset134 STSongti-SC-Regular;\f2\froman\fcharset0 TimesNewRomanPSMT;
+\f3\fnil\fcharset136 STSongti-TC-Regular;\f4\fnil\fcharset136 PingFangTC-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue117;\red74\green0\blue230;\red254\green191\blue193;
+\red255\green255\blue11;\red252\green77\blue84;\red173\green173\blue173;\red100\green100\blue100;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid1\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww25400\viewh18980\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs72 \cf0 \
+\
+
+\fs36 \'ca\'ae\'d2\'bb\'d5\'c2	\'d1\'a7\'cf\'b0BASH\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\fs30 \cf2 \expnd0\expndtw0\kerning0
+\'cb\'ab\'d2\'fd\'ba\'c5\'c4\'da\'b5\'c4\'cc\'d8\'ca\'e2\'d7\'d6\'b7\'fb\'c8\'e7 $ \'b5\'c8\'a3\'ac\'bf\'c9\'d2\'d4\'b1\'a3\'d3\'d0\'d4\'ad\'b1\'be\'b5\'c4\'cc\'d8\'d0\'d4\cf0 \'a3\'ac\'c8\'e7\'cf\'c2\'cb\'f9\'ca\'be\'a3\'ba\
+\'a1\'bavar="lang is $LANG"\'a1\'bb\'d4\'f2\'a1\'baecho $var\'a1\'bb\'bf\'c9\'b5\'c3\'a1\'balang is en_US\'a1\'bb\
+\ls1\ilvl0\cf2 \'b5\'a5\'d2\'fd\'ba\'c5\'c4\'da\'b5\'c4\'cc\'d8\'ca\'e2\'d7\'d6\'b7\'fb\'d4\'f2\'bd\'f6\'ce\'aa\'d2\'bb\'b0\'e3\'d7\'d6\'b7\'fb (\'b4\'bf\'ce\'c4\'b1\'be)\cf0 \'a3\'ac\'c8\'e7\'cf\'c2\'cb\'f9\'ca\'be\'a3\'ba\
+\'a1\'bavar='lang is $LANG'\'a1\'bb\'d4\'f2\'a1\'baecho $var\'a1\'bb\'bf\'c9\'b5\'c3\'a1\'balang is $LANG\'a1\'bb\
+\
+\pard\pardeftab720\partightenfactor0
+\ls1\ilvl0\cf0 \'d4\'da\'d2\'bb\'b4\'ae\'c3\'fc\'c1\'ee\'d6\'d0\'a3\'ac\cf3 \'bb\'b9\'d0\'e8\'d2\'aa\'bd\'e5\'d3\'c9\'c6\'e4\'cb\'fb\'b5\'c4\'c3\'fc\'c1\'ee\'cc\'e1\'b9\'a9\'b5\'c4\'d0\'c5\'cf\'a2\cf0 \'a3\'ac\'bf\'c9\'d2\'d4\'ca\'b9\'d3\'c3\'b7\'b4\'b5\'a5\'d2\'fd\'ba\'c5\'a1\'ba`\'c3\'fc\'c1\'ee`\'a1\'bb\'bb\'f2 \'a1\'ba$(\'c3\'fc\'c1\'ee)\'a1\'bb\
+[root@www ~]# cd /lib/modules/`uname -r`/kernel\
+[root@www ~]# cd /lib/modules/$(uname -r)/kernel\
+\pard\pardeftab720\partightenfactor0
+\ls1\ilvl0
+\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs30 \cf0 \expnd0\expndtw0\kerning0
+\'d7\'d3\'b3\'cc\'d0\'f2\'a3\'babash\
+\'cd\'cb\'b3\'f6\'a3\'baexit\
+\'cd\'e2\'b2\'bf\'b1\'e4\'c1\'bf export\
+\
+\'b6\'c1\'c8\'a1\'d0\'c5\'cf\'a2\
+[root@www ~]# read -p "Please keyin your name: " -t 30 named\
+Please keyin your name: VBird Tsai   <==\'d7\'a2\'d2\'e2\'bf\'b4\'a3\'ac\'bb\'e1\'d3\'d0\'cc\'e1\'ca\'be\'d7\'d6\'b7\'fb\'e0\'b8\'a3\'a1\
+[root@www ~]# echo $named\
+VBird Tsai        <==\'ca\'e4\'c8\'eb\'b5\'c4\'ca\'fd\'be\'dd\'d3\'d6\'b1\'e4\'b3\'c9\'d2\'bb\'b8\'f6\'b1\'e4\'c1\'bf\'b5\'c4\'c4\'da\'c8\'dd\'c1\'cb\'a3\'a1\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf0 declare 
+\f1 \'bb\'f2
+\f2  typeset 
+\f1 \'ca\'c7\'d2\'bb\'d1\'f9\'b5\'c4\'b9\'a6\'c4\'dc\'a3\'ac\'be\'cd\'ca\'c7\'d4\'da\'a1\'ba
+\f3 \cf2 \'ab\'c5\'a7\'69\uc0\u21464 \'b6\'71\'aa\'ba\u31867 \'ab\'ac
+\f1 \cf0 \'a1\'bb\'a1\'a3\'c8\'e7\'b9\'fb\'ca\'b9\'d3\'c3
+\f2  declare 
+\f1 \'ba\'f3\'c3\'e6\'b2\'a2\'c3\'bb\'d3\'d0\'bd\'d3\'c8\'ce\'ba\'ce\'b2\'ce\'ca\'fd\'a3\'ac\'c4\'c7\'c3\'b4
+\f2  bash 
+\f1 \'be\'cd\'bb\'e1\'d6\'f7\'b6\'af\'b5\'c4\'bd\'ab\'cb\'f9\'d3\'d0\'b5\'c4\'b1\'e4\'c1\'bf\'c3\'fb\'b3\'c6\'d3\'eb\'c4\'da\'c8\'dd\'cd\'a8\'cd\'a8\'bd\'d0\'b3\'f6\'c0\'b4\'a3\'ac\'be\'cd\'ba\'c3\'cf\'f1\'ca\'b9\'d3\'c3
+\f2  set 
+\f1 \'d2\'bb\'d1\'f9\'c0\'b2\'a3\'a1
+\f2  
+\f1 \'c4\'c7\'c3\'b4
+\f2  declare 
+\f1 \'bb\'b9\'d3\'d0\'ca\'b2\'c3\'b4\'d3\'ef\'b7\'a8\'c4\'d8\'a3\'bf\'bf\'b4\'bf\'b4\'cf\'c8\'a3\'ba
+\f2 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trcbpat0 \tamart200 \tamarb200 \trbrdrt\brdrs\brdrw60\brdrcf4 \trbrdrl\brdrs\brdrw60\brdrcf4 \trbrdrb\brdrs\brdrw60\brdrcf4 \trbrdrr\brdrs\brdrw60\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth11360\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f4\fs26 \cf1 [root@www ~]# 
+\f3\b \cf5 declare [-aixr] variable
+\f4\b0 \cf1 \
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f3 \cf6 \uc0\u36873 \u39033 \'c9\'4f\u21442 \u25968 \'a1\'47\
+-a  \'a1\'47\uc0\u23558 \'a6\'5a\'ad\'b1\'a6\'57\u20026  variable \'aa\'ba\u21464 \'b6\'71\'a9\'77\u20041 \'a6\'a8\u20026 \u25968 \u32452  (array) \u31867 \'ab\'ac\
+-i  \'a1\'47\uc0\u23558 \'a6\'5a\'ad\'b1\'a6\'57\u20026  variable \'aa\'ba\u21464 \'b6\'71\'a9\'77\u20041 \'a6\'a8\u20026 \'be\'e3\u25968 \u25968 \'a6\'72 (integer) \u31867 \'ab\'ac\
+-x  \'a1\'47\'a5\'ce\'aa\'6b\'c9\'4f export \'a4\'40\uc0\u26679 \'a1\'41\'b4\'4e\'ac\'4f\u23558 \'a6\'5a\'ad\'b1\'aa\'ba variable \u21464 \'a6\'a8\u29615 \'b9\'d2\u21464 \'b6\'71\'a1\'46\
+-r  \'a1\'47\uc0\u23558 \u21464 \'b6\'71\'b0\'74\'b8\'6d\'a6\'a8\u20026  readonly \u31867 \'ab\'ac\'a1\'41\u35813 \u21464 \'b6\'71\'a4\'a3\'a5\'69\'b3\'51\'a7\'f3\'a7\'ef\u20869 \'ae\'65\'a1\'41\'a4\'5d\'a4\'a3\'af\'e0 unset
+\f4 \cf1 \
+\
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f3 \cf7 \'ad\'53\'a8\'d2\'a4\'40\'a1\'47\uc0\u35753 \u21464 \'b6\'71 sum \u36827 \'a6\'e6 100+300+50 \'aa\'ba\'a5\'5b\u24635 \u32467 \'aa\'47
+\f4 \cf1 \
+[root@www ~]# 
+\f3\b \cf5 sum=100+300+50
+\f4\b0 \cf1 \
+[root@www ~]# 
+\f3\b \cf5 echo $sum
+\f4\b0 \cf1 \
+100+300+50  
+\f3 \cf8 <==\'ab\'78\'a1\'49\'ab\'e7\'a4\'5c\uc0\u27809 \'a6\'b3\u24110 \'a7\'da\u35745 \'ba\'e2\'a5\'5b\u24635 \'a1\'48\'a6\'5d\u20026 \u36825 \'ac\'4f\'a4\'e5\'a6\'72\'ab\'ac\u24577 \'aa\'ba\u21464 \'b6\'71\u23646 \'a9\'ca\'b0\'da\'a1\'49
+\f4 \cf1 \
+[root@www ~]# 
+\f3\b \cf5 declare -i sum=100+300+50
+\f4\b0 \cf1 \
+[root@www ~]# 
+\f3\b \cf5 echo $sum
+\f4\b0 \cf1 \
+450         
+\f3 \cf8 <==\'c1\'41\'a5\'47\'a1\'48\'a1\'48
+\f4 \cf1 \cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs30 \cf0 \
+\'d3\'c9\'d3\'da\'d4\'da\'c4\'ac\'c8\'cf\'b5\'c4\'c7\'e9\'bf\'f6\'b5\'d7\'cf\'c2\'a3\'ac
+\f2  bash 
+\f1 \'b6\'d4\'d3\'da\'b1\'e4\'c1\'bf\'d3\'d0\'bc\'b8\'b8\'f6\'bb\'f9\'b1\'be\'b5\'c4\'b6\'a8\'d2\'e5\'a3\'ba
+\f2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f3 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\'a1\'45	}\expnd0\expndtw0\kerning0
+\uc0\u21464 \'b6\'71\u31867 \'ab\'ac\'c0\'71\u35748 \u20026 \'a1\'79\'a6\'72\'b2\'c5\'a6\'ea\'a1\'7a\'a1\'41\'a9\'d2\'a5\'48\'ad\'59\'a4\'a3\'ab\'fc\'a9\'77\u21464 \'b6\'71\u31867 \'ab\'ac\'a1\'41\u21017  1+2 \u20026 \'a4\'40\u20010 \'a1\'79\'a6\'72\'b2\'c5\'a6\'ea\'a1\'7a\'a6\'d3\'a4\'a3\'ac\'4f\'a1\'79\u35745 \'ba\'e2\'a6\'a1\'a1\'7a\'a1\'43 \'a9\'d2\'a5\'48\'a4\'57\'ad\'7a\'b2\'c4\'a4\'40\u20010 \u36816 \'a6\'e6\'aa\'ba\u32467 \'aa\'47\'a4\'7e\u20250 \'a5\'58\u29616 \'a8\'ba\u20010 \'b1\'a1\u20917 \'aa\'ba\'a1\'46\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\'a1\'45	}\expnd0\expndtw0\kerning0
+bash \uc0\u29615 \'b9\'d2\'a4\'a4\'aa\'ba\u25968 \'ad\'c8\u36816 \'ba\'e2\'a1\'41\'c0\'71\u35748 \'b3\'cc\'a6\'68\u20165 \'af\'e0\'a8\'ec\u36798 \'be\'e3\u25968 \'a7\'ce\u24577 \'a1\'41\'a9\'d2\'a5\'48 1/3 \u32467 \'aa\'47\'ac\'4f 0\'a1\'46\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf0 \'cf\'d6\'d4\'da\'c4\'e3\'cf\'fe\'b5\'c3\'ce\'aa\'c9\'b6\'c4\'e3\'d0\'e8\'d2\'aa\'bd\'f8\'d0\'d0\'b1\'e4\'c1\'bf\'d0\'fb\'b8\'e6\'c1\'cb\'b0\'c9\'a3\'bf\'c8\'e7\'b9\'fb\'d0\'e8\'d2\'aa\'b7\'c7\'d7\'d6\'b7\'fb\'b4\'ae\'c0\'e0\'d0\'cd\'b5\'c4\'b1\'e4\'c1\'bf\'a3\'ac\'c4\'c7\'be\'cd\'b5\'c3\'d2\'aa\'bd\'f8\'d0\'d0\'b1\'e4\'c1\'bf\'b5\'c4\'d0\'fb\'b8\'e6\'b2\'c5\'d0\'d0\'c0\'b2\'a3\'a1
+\f2  
+\f1 \'b5\'d7\'cf\'c2\'bc\'cc\'d0\'f8\'c0\'b4\'cd\'e6\'d0\'a9\'c6\'e4\'cb\'fb\'b5\'c4
+\f2  declare 
+\f1 \'b9\'a6\'c4\'dc\'a1\'a3
+\f2 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trcbpat0 \tamart200 \tamarb200 \trbrdrt\brdrs\brdrw60\brdrcf4 \trbrdrl\brdrs\brdrw60\brdrcf4 \trbrdrb\brdrs\brdrw60\brdrcf4 \trbrdrr\brdrs\brdrw60\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth11360\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf7 \'ad\'53\'a8\'d2\'a4\'47\'a1\'47\uc0\u23558  sum \u21464 \'a6\'a8\u29615 \'b9\'d2\u21464 \'b6\'71
+\f4 \cf1 \
+[root@www ~]# 
+\f3\b \cf5 declare -x sum
+\f4\b0 \cf1 \
+[root@www ~]# 
+\f3\b \cf5 export | grep sum
+\f4\b0 \cf1 \
+declare -ix sum="450"  
+\f3 \cf8 <==\'aa\'47\'b5\'4d\'a5\'58\uc0\u29616 \'a4\'46\'a1\'49\'a5\'5d\'ac\'41\'a6\'b3 i \'c9\'4f x \'aa\'ba\'ab\'c5\'a7\'69\'a1\'49
+\f4 \cf1 \
+\
+
+\f3 \cf7 \'ad\'53\'a8\'d2\'a4\'54\'a1\'47\uc0\u35753  sum \u21464 \'a6\'a8\'a5\'75\u35835 \u23646 \'a9\'ca\'a1\'41\'a4\'a3\'a5\'69\'a7\'f3\u21160 \'a1\'49
+\f4 \cf1 \
+[root@www ~]# 
+\f3\b \cf5 declare -r sum
+\f4\b0 \cf1 \
+[root@www ~]# 
+\f3\b \cf5 sum=tesgting
+\f4\b0 \cf1 \
+-bash: sum: readonly variable  
+\f3 \cf8 <==\'a6\'d1\'a4\'d1\uc0\u29239 \'a1\'e3\'a4\'a3\'af\'e0\'a7\'ef\u36825 \u20010 \u21464 \'b6\'71\'a4\'46\'a1\'49
+\f4 \cf1 \
+\
+
+\f3 \cf7 \'ad\'53\'a8\'d2\'a5\'7c\'a1\'47\uc0\u35753  sum \u21464 \'a6\'a8\'ab\'44\u29615 \'b9\'d2\u21464 \'b6\'71\'aa\'ba\'a6\'db\'a9\'77\u20041 \u21464 \'b6\'71\'a7\'61\'a1\'49
+\f4 \cf1 \
+[root@www ~]# 
+\f3\b \cf5 declare +x sum
+\f4\b0 \cf1   
+\f3 \cf8 <== \uc0\u23558  - \u21464 \'a6\'a8 + \'a5\'69\'a5\'48\u36827 \'a6\'e6\'a1\'79\'a8\'fa\'ae\'f8\'a1\'7a\u21160 \'a7\'40
+\f4 \cf1 \
+[root@www ~]# 
+\f3\b \cf5 declare -p sum
+\f4\b0 \cf1   
+\f3 \cf8 <== -p \'a5\'69\'a5\'48\uc0\u21333 \u29420 \'a6\'43\'a5\'58\u21464 \'b6\'71\'aa\'ba\u31867 \'ab\'ac
+\f4 \cf1 \
+declare -ir sum="450" 
+\f3 \cf8 <== \'ac\'dd\'a7\'61\'a1\'49\'a5\'75\'b3\'d1\'a4\'55 i, r \'aa\'ba\uc0\u31867 \'ab\'ac\'a1\'41\'a4\'a3\'a8\'e3\'a6\'b3 x \u21872 \'a1\'49
+\f4 \cf1 \cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs30 \cf0 \
+declare 
+\f1 \'d2\'b2\'ca\'c7\'b8\'f6\'ba\'dc\'d3\'d0\'d3\'c3\'b5\'c4\'b9\'a6\'c4\'dc\'a1\'ab\'d3\'c8\'c6\'e4\'ca\'c7\'b5\'b1\'ce\'d2\'c3\'c7\'d0\'e8\'d2\'aa\'ca\'b9\'d3\'c3\'b5\'bd\'b5\'d7\'cf\'c2\'b5\'c4\'ca\'fd\'d7\'e9\'b9\'a6\'c4\'dc\'ca\'b1\'a3\'ac
+\f2  
+\f1 \'cb\'fb\'d2\'b2\'bf\'c9\'d2\'d4\'b0\'ef\'ce\'d2\'c3\'c7\'d0\'fb\'b8\'e6\'ca\'fd\'d7\'e9\'b5\'c4\'ca\'f4\'d0\'d4\'e0\'b8\'a3\'a1\'b2\'bb\'b9\'fd\'a3\'ac\'c0\'cf\'bb\'b0\'d2\'bb\'be\'e4\'a3\'ac\'ca\'fd\'d7\'e9\'d2\'b2\'ca\'c7\'d4\'da
+\f2  shell script 
+\f1 \'b1\'c8\'bd\'cf\'b3\'a3\'d3\'c3\'b5\'c4\'c0\'b2\'a3\'a1
+\f2  
+\f1 \'b1\'c8\'bd\'cf\'d3\'d0\'c8\'a4\'b5\'c4\'ca\'c7\'a3\'ac\'c8\'e7\'b9\'fb\'c4\'e3\'b2\'bb\'d0\'a1\'d0\'c4\'bd\'ab\'b1\'e4\'c1\'bf\'c5\'e4\'d6\'c3\'ce\'aa\'a1\'ba\'d6\'bb\'b6\'c1\'a1\'bb\'a3\'ac\'cd\'a8\'b3\'a3\'b5\'c3\'d2\'aa\'d7\'a2\'cf\'fa\'d4\'d9\'b5\'c7\'c2\'bd\'b2\'c5\'c4\'dc\'b8\'b4\'d4\'ad\'b8\'c3\'b1\'e4\'c1\'bf\'b5\'c4\'c0\'e0\'d0\'cd\'c1\'cb\'a3\'a1\
+\
+\'b1\'e4\'c1\'bf\'c4\'da\'c8\'dd\'c9\'be\'b3\'fd\'a3\'ba\
+\
+\
+\
+\
+}
