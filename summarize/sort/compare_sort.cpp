@@ -35,7 +35,7 @@ void makeRandomList(int* testArray, int n)
 int main()
 {
 	//int testArray[10];
-	int testArray[]={10,9,8,7,6,5,4,3,2,1};
+	int testArray[]={3,5,7,6,4,6};
 	int sizeForArray=sizeof(testArray)/sizeof(testArray[0]);
 	//srand((unsigned)time(NULL));//unsigned int seed=5; srand(seed);
 	//makeRandomList(testArray,sizeForArray);
@@ -59,7 +59,7 @@ int main()
 	time_t t_start_for_all, t_end_for_all;
 	t_start_for_all=clock();
 	
-	for(int i=0; i<4; i++)
+	for(int i=1; i<2; i++)
 	{
 		memcpy(copyTestArray,testArray,sizeof(testArray));
 		sortBy(op[i],copyTestArray,sizeForArray);

@@ -28,8 +28,10 @@ void InsertSort(int* min, int* max)		//*min与*max(最后一个元素后边的�
 //a1133
 void QuickSort(int* min, int* max)
 {
-	if(min<max)
-	{
+	if(min == NULL || max == NULL || max-min==0)	//max-min == 0 等价于下面的min<max
+		return;
+
+	//if(min<max){	
 		int temp=*min;
 		int* high=max-1;
 		int* low=min;
@@ -40,16 +42,19 @@ void QuickSort(int* min, int* max)
 				high--;
 			while(temp>=*low && low<high)
 				low++;
-			if(high != low)
+			if(high != low)     //应该写，记得写，但是现在不知道这行有什么用
 				swap(*high, *low);
+				
 		}
 		swap(*low,*min);
-		//for(int* tempP=min; tempP<max; tempP++)
-		//	cout<<*tempP<<' ';
-		//cout<<endl;
+		/*
+		for(int* tempP=min; tempP<max; tempP++)
+			cout<<*tempP<<' ';
+		cout<<endl;
+		*/
 		QuickSort(min,low);
 		QuickSort(low+1,max);
-	}
+	//}
 
 }
 
@@ -175,7 +180,8 @@ void MergeSort(int* min, int* max)
 {
 	if(min<max-1)				//注意这里有max-1，因为*(max-1)才是一个数，这样比较才有意义，否则会陷入一直计算第一个数
 	{
-		
+		//同时，注意，对于害怕mid==min，可以先鉴定最后一个有效值*(max-1)与*(min)的位置差是不是1，
+		//如果是1，就特别处理(例如，两者比较大小，如果。。。就交换，否则不变。。。)
 
 		int* mid=min+(max-min)/2;
 		MergeSort(min,mid);		//这里不包括mid
