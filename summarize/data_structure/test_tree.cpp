@@ -120,8 +120,39 @@ bool VerifySquenceByPostOrderOfBST(int sequence[], int length)
 
 
 
+//为某一个值的路径，利用栈辅助(保存路径，而不是和，和使用一个值保存，退出后把当前值减去就行),并采用前序遍历
+void FindPath(BinaryTreeNode* pRoot, int expectedSum)
+{
+	if(pRoot == NULL)
+		return;
 
+	std::vector<int> path;
+	int currentSum = 0;
+	FindPath(pRoot, expectedSum, path, currentSum);
+}
+void FindPath(BinaryTreeNode* pRoot, int expectedSum, std::vector<int> path, int& currentSum)
+{
+	currentSum += pRoot->m_nValue;
+	path.push_back(pRoot->m_nValue);
 
+	bool isLeaf = pRoot->m_pLeft == NULL && pRoot->m_pRight == NULL;
+
+	if(currentSum == expectedSum && isLeaf)
+	{
+		//找到一个路径
+		for(auto iter=path.begin(); iter != path.end(); iter++)
+			std::cout<<*iter<<' '<<std::endl;
+		std::cout<<endl;
+	}
+
+	if(pRoot->m_pLeft != NULL)
+		FindPath(pRoot->left, expectedSum, path, currentSum);
+	if(pRoot->m_pRight != NULL)
+		FindPath(pRoot->right, expectedSum, path,currentSum);
+
+	currentSum-=pRoot->m_nValue;
+	path.pop_back();
+}
 
 
 

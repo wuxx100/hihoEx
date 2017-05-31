@@ -2,6 +2,31 @@
 #include <string>
 
 using namespace std;
+
+//全排列，可以用在得到数组的全部可能排列上(可能对于数字需要使用length,而不是'\0')
+//利用首位与之后任一位交换后，再递归，再交换回来，再循环
+void Permutation(char* pStr)
+{
+	if(pStr == NULL)
+		return;
+	Permutation(pStr, pStr);
+}
+void Permutation(char* pStr, char* pBegin)	//每个递归都是从pBegin开始乱排，pStr只负责打印
+{
+	if(*pBegin == '\0')						//递归到最后一个字符(最后一轮)才开始打印
+		cout<<pStr<<endl;
+	else
+	{
+		for(char* pCh = pBegin; *pCh != '\0'; pCh++)
+		{
+			swap(*pCh,*pBegin);
+			Permutation(pStr, pBegin+1);
+			swap(*pCh,*pBegin);
+		}
+	}
+}
+
+
 int main()
 {
 	string str1="hahaha";

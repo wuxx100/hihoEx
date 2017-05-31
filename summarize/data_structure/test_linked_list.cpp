@@ -197,6 +197,159 @@ ListNode* MergeSortedList(ListNode* pHead1, ListNode* pHead2)
 }
 
 
+/**************************************************************/
+//复杂链表，处了一个指向下个节点的指针，还有一个指向任意节点的指针
+struct ComplexListNode
+{
+	int m_nValue;
+	ComplexListNode* m_pNext;
+	ComplexListNode* m_pSibling;
+};
+//把复杂链表复制，分布
+//一，在原链表基础上复制节点
+void CloneNodes(ComplexListNode* pHead)
+{
+	ComplexListNode* pNode = pHead;
+	while(pNode != NULL)
+	{
+		ComplexListNode* pCloned = new ComplexListNode;
+		pCloned->m_pNext=pNode->m_pNext;
+		pCloned->m_nValue=pNode->m_nValue;
+		pCloned->m_pSibling=NULL;
+		pNode->m_pNext=pCloned;
+
+		pNode=pCloned->m_pNext;
+	}
+}
+//二，给复制的节点加上m_pSibling
+void ConnectSiblingNodes(ComplexListNode* pHead)
+{
+	ComplexListNode* pNode = pHead;
+	while(pNode != NULL)
+	{
+		ComplexListNode *pCloned = pNode->m_pNext;
+		if(pNode->m_pSibling != NULL)
+			pCloned->m_pSibling=pNode->m_pSibling->m_pNext;
+		pNode=pCloned->m_pNext;
+	}
+}
+//三，把复制好的链表拆下来，成为克隆的链表
+ComplexListNode* ReconnectNodes(ComplexListNode* pHead)
+{
+	ComplexListNode* pNode = pHead;
+	ComplexListNode* pClonedHead=NULL;
+	ComplexListNode* pCloned = NULL;
+
+	if(pNode != NULL)
+	{
+		pClonedHead = pCloned =pNode->m_pNext;
+		pNode->m_pNext = pClonedHead->m_pNext;
+		pNode = pNode->m_pNext;
+	}
+
+	while(pNode != NULL)
+	{
+		pCloned->m_pNext=pNode->m_pNext;
+		pCloned=pNode->m_pNext;
+		pNode->m_pNext=pCloned->m_pNext;
+		pNode=pCloned->m_pNext;
+	}
+
+	return pClonedHead;
+}
+
+ComplexListNode* Clone(ComplexListNode* pHead)
+{
+	CloneNodes(pHead);
+	ConnectSiblingNodes(pHead);
+	return ReconnectNodes(pHead);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
