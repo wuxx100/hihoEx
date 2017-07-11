@@ -7,6 +7,7 @@
 using namespace std;
 
 //复杂度 o(n^2)
+//稳定排序
 void InsertSort(int* min, int* max)		//*min与*max(最后一个元素后边的指针)之间的进行排序
 {
 	if(min<max)
@@ -26,6 +27,7 @@ void InsertSort(int* min, int* max)		//*min与*max(最后一个元素后边的�
 
 //平均复杂度 o(n*logn), 复杂度o(n^2)
 //a1133
+//不稳定排序
 void QuickSort(int* min, int* max)
 {
 	if(min == NULL || max == NULL || max-min==0)	//max-min == 0 等价于下面的min<max
@@ -88,6 +90,7 @@ void QuickSortV2(int* min, int* max)
 	}
 }
 
+//稳定排序
 //复杂度为o(k+n),如果k特别大（最大的数特别大）,浪费空间,运行慢；并且得把数据先处理成整数
 void BucketSort(int* left, int* right, int min, int max)	//*left与*right(最后一个元素后边的指针)
 															//之间的进行排序
@@ -128,6 +131,7 @@ void BucketSort(int* left, int* right, int min, int max)	//*left与*right(最后
 //平均复杂度 o(n*logn), 复杂度o(n*logn)
 //空间复杂度o(n)
 //a1141
+//稳定排序
 
 void Merge2Array(int* min, int* mid, int* max)
 {
@@ -166,11 +170,11 @@ void Merge2Array(int* min, int* mid, int* max)
 
 	if(i<leftArrayNum)
 	{
-		memcpy(k,leftArrayP+i,(max-k)*4);
+		memcpy(k,leftArrayP+i,(max-k)*sizeof(int));
 	}
 	else
 	{
-		memcpy(k,rightArrayP+j,(max-k)*4);
+		memcpy(k,rightArrayP+j,(max-k)*sizeof(int));
 	}
 	delete[] leftArrayP;
 	delete[] rightArrayP;
@@ -190,6 +194,7 @@ void MergeSort(int* min, int* max)
 	}
 }
 
+//稳定排序
 //平均复杂度 o(n^2)
 //空间复杂度 总共o(n),每次o(1)
 void BubbleSort(int* min, int* max)
@@ -201,6 +206,45 @@ void BubbleSort(int* min, int* max)
 			if(*q>*(q+1))
 				swap(*q,*(q+1));
 		}
+	}
+}
+
+//不稳定排序
+//最坏时间复杂度 o(n*logn)
+void MaxHeapify(int* start, int* end, int* arrayHead)
+{
+	int* father=start;
+	int fatherIdx=father-arrayHead;
+	int* firstSon=arrayHead+fatherIdx*2+1;
+
+	while(firstSon<end)
+	{
+		if(firstSon+1<end && *firstSon<*(firstSon+1))	//让父节点与值更大的子节点交换
+			firstSon++;
+		if(*father>*firstSon)
+			return;
+		else
+		{
+			swap(*father,*firstSon);
+			father=firstSon;
+			fatherIdx=father-arrayHead;
+			firstSon=arrayHead+fatherIdx*2+1;
+		}
+	}
+}
+
+void HeapSort(int* min, int* max)
+{
+	if(max-min<=1)
+		return;
+	//最大堆调整，从最后一个父节点开始调整(min+(max-min)/2-1)
+	for(int* i=min+(max-min)/2-1; i>=min; i--)
+		MaxHeapify(i,max,min);
+	//调整之后，把最小点与最后一个子叶交换并减掉，然后重新简单的调整
+	for(int* j=max-1; j>min; j--)
+	{
+		swap(*min, *j);
+		MaxHeapify(min,j,min);
 	}
 }
 
