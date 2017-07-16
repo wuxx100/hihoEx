@@ -5,13 +5,7 @@ using namespace std;
 
 //全排列，可以用在得到数组的全部可能排列上(可能对于数字需要使用length,而不是'\0')
 //利用首位与之后任一位交换后，再递归，再交换回来，再循环
-void Permutation(char* pStr)
-{
-	if(pStr == NULL)
-		return;
-	Permutation(pStr, pStr);
-}
-void Permutation(char* pStr, char* pBegin)	//每个递归都是从pBegin开始乱排，pStr只负责打印
+void Permutate(char* pStr, char* pBegin)	//每个递归都是从pBegin开始乱排，pStr只负责打印
 {
 	if(*pBegin == '\0')						//递归到最后一个字符(最后一轮)才开始打印
 		cout<<pStr<<endl;
@@ -20,11 +14,18 @@ void Permutation(char* pStr, char* pBegin)	//每个递归都是从pBegin开始�
 		for(char* pCh = pBegin; *pCh != '\0'; pCh++)
 		{
 			swap(*pCh,*pBegin);
-			Permutation(pStr, pBegin+1);
+			Permutate(pStr, pBegin+1);
 			swap(*pCh,*pBegin);
 		}
 	}
 }
+void Permutation(char* pStr)
+{
+	if(pStr == NULL)
+		return;
+	Permutate(pStr, pStr);
+}
+
 
 
 int main()
@@ -35,6 +36,7 @@ int main()
 	char* str4="hahaha";
 	char str5[]="hahaha";
 	char str6[]="hahaha";
+	
 
 	str1[2]='b';	//没有这句，str1,2就是相同的，有了这句，str1,2就不同，1拷贝新的一份并改变，2并不变
 	//str3[2]='b';	这句话不可以写，在编译时可以通过，但是char* 不可以写，只能读，在运行时会出现bus error

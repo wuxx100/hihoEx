@@ -5,6 +5,36 @@ struct ListNode
 	ListNode* m_pNext;
 };
 
+
+void CreatList(ListNode** pHead, int* num, int length)
+{
+	ListNode* pTail= new ListNode();
+	pTail->m_nValue=num[length-1];
+	pTail->m_pNext=NULL;
+
+	ListNode* pRecord=pTail;
+	
+	for(int i=length-2; i>=0; i--)
+	{
+		ListNode* pNew=new ListNode();
+		pNew->m_nValue=num[i];
+		pNew->m_pNext=pRecord;
+		pRecord=pNew;
+	}
+	
+	*pHead=pRecord;
+}
+
+void PrintList(ListNode* pHead)
+{
+	while(pHead != NULL)
+	{
+		cout<<pHead->m_nValue<<' ';
+		pHead=pHead->m_pNext;
+	}
+	cout<<endl;
+}
+
 //链表增加没有闲置内存，空间效率高
 //由于开始pHead为NULL,加上一个节点之后,pHead就有值了，所以，pHead(ListNode*)需要改变，使用ListNode**
 void AddToTail(ListNode** pHead, int value)
@@ -73,7 +103,7 @@ void PrintListReversing_V1(ListNode* pHead)
 	while(!nodes.empty())
 	{
 		pNode = nodes.top();
-		std::cout<<pNode->m_nValue<<' '<<endl;
+		cout<<pNode->m_nValue<<' ';
 		nodes.pop();
 	}
 }
@@ -85,7 +115,7 @@ void PrintListReversing_V2(ListNode* pHead)
 	{
 		if(pHead->m_pNext != NULL)
 			PrintListReversing_V2(pHead->m_pNext);
-		std::cout<<pHead->m_nValue<<' '<<endl;
+		std::cout<<pHead->m_nValue<<' ';
 	}
 }
 
@@ -107,7 +137,7 @@ void DeleteNode(ListNode** pHead, ListNode* pToBeDeleted)
 		pNext=NULL;
 	}
 	//如果头结点就是尾结点
-	eles if (pToBeDeleted == *pHead)
+	else if (pToBeDeleted == *pHead)
 	{
 		delete pToBeDeleted;
 		pToBeDeleted=NULL;
@@ -164,7 +194,7 @@ ListNode* ReverseList(ListNode* pHead)
 	{
 		ListNode* pNext = pNode->m_pNext;
 		if(pNext == NULL)
-			pReversedHead = pNext;
+			pReversedHead = pNode;
 		pNode->m_pNext=pPrev;
 		pPrev = pNode;
 		pNode=pNext;
@@ -196,9 +226,21 @@ ListNode* MergeSortedList(ListNode* pHead1, ListNode* pHead2)
 	return pMergedHead;
 }
 
+void DeleteList(ListNode** pHead)
+{
+	ListNode* pNode=*pHead;
+	ListNode* pNext;
+
+	while(pNode != NULL)
+	{
+		pNext=pNode->m_pNext;
+		delete pNode;
+		pNode=pNext;
+	}
+}
 
 /**************************************************************/
-//复杂链表，处了一个指向下个节点的指针，还有一个指向任意节点的指针
+//复杂链表，除了一个指向下个节点的指针，还有一个指向任意节点的指针
 struct ComplexListNode
 {
 	int m_nValue;
